@@ -47,42 +47,10 @@
         },
         {
             "attributes": {
-                "action": "!token-mod --set light_radius|0 light_dimradius|0 light_otherplayers|off light_hassight|on",
-                "istokenaction": true,
-                "name": "👓Basic",
-                "visibleto": "all"
-            }
-        },
-        {
-            "attributes": {
-                "action": "!token-mod --set light_radius|60 light_dimradius|0 light_otherplayers|off light_hassight|on",
-                "istokenaction": true,
-                "name": "👓60Dark",
-                "visibleto": ""
-            }
-        },
-        {
-            "attributes": {
-                "action": "!token-mod --set light_radius|120 light_dimradius|0 light_otherplayers|off light_hassight|on",
-                "istokenaction": true,
-                "name": "👓120Dark",
-                "visibleto": ""
-            }
-        },
-        {
-            "attributes": {
                 "action": "!token-mod --on showname showplayers_name  showplayers_bar1 light_hassight --set bar1_link|hp bar2_link|ac light_radius|0 light_dimradius|0",
                 "istokenaction": false,
                 "name": "⚡Initialize",
                 "visibleto": "all"
-            }
-        },
-        {
-            "attributes": {
-                "action": "!token-mod --set light_radius|120 light_dimradius|120 light_otherplayers|off light_hassight|on",
-                "istokenaction": true,
-                "name": "👓120Devil",
-                "visibleto": ""
             }
         },
         {
@@ -262,6 +230,22 @@
                 "action": "!modbattr --sel --fb-public --fb-from Vault --fb-header Potion of Healing --fb-content _TCUR0_ health recovered. --hp|?{Choose a Potion|Basic,[[2d4+2]]|Greater,[[4d4+4]]|Superior,[[8d4+8]]|Supreme,[[10d4+20]]}",
                 "istokenaction": true,
                 "name": "💖Potion",
+                "visibleto": ""
+            }
+        },
+        {
+            "attributes": {
+                "action": "!token-mod --set light_radius|?{Vision Radius|0} light_dimradius|?{Bright Radius|0} light_otherplayers|off light_hassight|on",
+                "istokenaction": true,
+                "name": "👓",
+                "visibleto": ""
+            }
+        },
+        {
+            "attributes": {
+                "action": "/w gm &{template:atkdmg} {{mod=@{selected|level}}} {{rname=@{selected|race} @{selected|class}}} {{r1=🛡️AC @{selected|ac}🛡️}} {{normal=1}} {{r2=}} {{attack=1}} {{range=**@{selected|character_name}**}} {{damage=1}} {{dmg1flag=1}} {{dmg1=👓[[10+@{selected|wisdom_mod}+@{selected|passiveperceptionmod}+@{selected|perception_prof}+@{selected|perception_flat}]]}} {{dmg1type=Perception}} {{dmg2flag=1}} {{dmg2=[[10+@{selected|investigation_prof}+@{selected|intelligence_mod}+@{selected|investigation_flat}]]🔎}} {{dmg2type=Investigate}} {{crit1=crit1}} {{crit2=crit2}} {{save=1}} {{saveattr=💥Spell}} {{savedesc=}} {{savedc=@{selected|spell_save_dc}💥}} {{desc=}} {{hldmg=hldmg}} {{spelllevel=spelllevel}} ammo=ammo {{charname=}}x`",
+                "istokenaction": true,
+                "name": "📜",
                 "visibleto": ""
             }
         }
